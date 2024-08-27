@@ -1,3 +1,46 @@
+<?php
+include("conexao.php");
+session_start()
+
+if ($_SERVER["REQUEST_METHOD"]=="POST")
+{$meuemail = mysqli_real_escape_string($conn,$_POST['email']);
+  $minhasenha = mysqli_real_escape_string($conn,$_POST['senha']);
+  $switch = mysqli_real_escape_string($conn,$_POST['switch']);
+  if ($switch == 0)
+  {$sql = "SELECT id, senha FROM cliente WHERE email = '$meuemail'";  
+  } else if ($switch == 1) 
+    {$sql ="SELECT id, senha FROM funcionario WHERE email = '$meuemail'";
+    }
+  $result = mysqli_querry($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  if ($row)
+  {$stored_hash = $row['senha'];
+    if (password_verify($minhasenha, $stored_hash))  
+      {$id = $row['id'];
+      $email = $meuemail;
+      $_SESSION['usuario'] = $email;
+      $_SESSION['id'] = $id;
+      if ($switch == 0) 
+      {header('location: cliente/index.php');
+        exit();
+      } else if ($switch == 1) 
+      {header('location: empresa/index.php');
+        exit();
+      }
+      } else
+      {$_SESSION['mensagemerro'] = "O email ou senha informados estão incorretos";
+        header('location: login.php');
+        exit();
+      }
+    } else 
+      {$_SESSION['mensagemerro'] = "Usuario não localizado";
+      header('location: login.php');
+      exit();
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
