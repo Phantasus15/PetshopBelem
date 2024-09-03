@@ -1,8 +1,8 @@
 <?php
-include("conexao.php");
+/* include("conexao.php");
 session_start()
 
-if ($_SERVER["REQUEST_METHOD"]=="POST")
+if($_SERVER["REQUEST_METHOD"]=="POST")
 {$meuemail = mysqli_real_escape_string($conn,$_POST['email']);
   $minhasenha = mysqli_real_escape_string($conn,$_POST['senha']);
   $switch = mysqli_real_escape_string($conn,$_POST['switch']);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
       header('location: login.php');
       exit();
     }
-  }
+  } */
 ?>
 
 
