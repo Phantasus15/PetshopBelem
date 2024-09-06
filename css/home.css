@@ -6,9 +6,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.linha{
+    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 body{
     overflow-x: hidden;

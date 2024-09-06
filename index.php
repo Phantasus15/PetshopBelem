@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
 
     </link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -18,87 +18,105 @@ include("header.php");
 
 <body>
     <div class="main">
-        <div class="card">
-            <h6>Destaque para Cães</h6>
-            <ul class="lista">
-                <li>
-                    <div class="imagem">
+        <div class="linha">
+            <div class="card">
+                <h6>Destaque para Cães</h6>
+                <ul class="lista">
+                    <li>
+                        <div class="imagem">
 
-                        <img class="icone" src="assets/racao.png" alt="">
-                    </div>
-                    <p>
-                        Ração
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
+                            <img class="icone" src="assets/racao.png" alt="">
+                        </div>
+                        <p>
+                            Ração
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
 
-                        <img class="icone" src="assets/medicamento.png" alt="">
-                    </div>
-                    <p>
-                        Medicamento
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
+                            <img class="icone" src="assets/medicamento.png" alt="">
+                        </div>
+                        <p>
+                            Medicamento
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
 
-                        <img class="icone" src="assets/banho.png" alt="">
-                    </div>
-                    <p>
-                        Higiene
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
+                            <img class="icone" src="assets/banho.png" alt="">
+                        </div>
+                        <p>
+                            Higiene
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
 
-                        <img class="icone" src="assets/acessorios.png" alt="">
-                    </div>
-                    <p>
-                        Acessorios
-                    </p>
-                </li>
-            </ul>
+                            <img class="icone" src="assets/acessorios.png" alt="">
+                        </div>
+                        <p>
+                            Acessorios
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h6>Destaque para Gatos</h6>
+                <ul class="lista">
+                    <li>
+                        <div class="imagem">
+
+                            <img class="icone" src="assets/racao.png" alt="">
+                        </div>
+                        <p>
+                            Ração
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
+
+                            <img class="icone" src="assets/medicamento.png" alt="">
+                        </div>
+                        <p>
+                            Medicamento
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
+
+                            <img class="icone" src="assets/banho.png" alt="">
+                        </div>
+                        <p>
+                            Higiene
+                        </p>
+                    </li>
+                    <li>
+                        <div class="imagem">
+
+                            <img class="icone" src="assets/acessorios.png" alt="">
+                        </div>
+                        <p>
+                            Acessorios
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h6>Destaque para Gatos</h6>
-            <ul class="lista">
-                <li>
-                    <div class="imagem">
+        <div class="linha">
+            <div class="card">
+                <h6>Agende seu banho e tosa</h6>
+                <ul class="lista">
+                    <li>
+                        <div class="imagem">
 
-                        <img class="icone" src="assets/racao.png" alt="">
-                    </div>
-                    <p>
-                        Ração
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
-
-                        <img class="icone" src="assets/medicamento.png" alt="">
-                    </div>
-                    <p>
-                        Medicamento
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
-
-                        <img class="icone" src="assets/banho.png" alt="">
-                    </div>
-                    <p>
-                        Higiene
-                    </p>
-                </li>
-                <li>
-                    <div class="imagem">
-
-                        <img class="icone" src="assets/acessorios.png" alt="">
-                    </div>
-                    <p>
-                        Acessorios
-                    </p>
-                </li>
-            </ul>
+                            <img class="icone" src="assets\banhoetosa.png" alt="">
+                        </div>
+                        <p>
+                            Banho e tosa
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
