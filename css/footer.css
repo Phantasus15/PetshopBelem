@@ -1,0 +1,21 @@
+.footer{
+    width: 100vw;
+    background-color: #00A8FF;
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+}
+.lista-nav{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #fff
+}
+.imagem-roda{
+    border-radius: 50%;
+}
