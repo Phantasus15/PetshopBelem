@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/header.css">
 <nav class="navbar navbar-expand-lg">
         <img src="assets/logo.jfif" style="height:75px;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

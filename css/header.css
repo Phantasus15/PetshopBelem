@@ -1,5 +1,6 @@
 .navbar{
     background-color: #F9E3BE;
+    width: 100vw;
 }
 a:link a:visited{
     color: black!important;
