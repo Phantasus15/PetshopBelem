@@ -1,43 +1,50 @@
 <?php
-/* include("conexao.php");
-session_start()
+include("conexao.php");
+session_start();
 
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{$meuemail = mysqli_real_escape_string($conn,$_POST['email']);
-  $minhasenha = mysqli_real_escape_string($conn,$_POST['senha']);
-  $switch = mysqli_real_escape_string($conn,$_POST['switch']);
-  if ($switch == 0)
-  {$sql = "SELECT id, senha FROM cliente WHERE email = '$meuemail'";  
-  } else if ($switch == 1) 
-    {$sql ="SELECT id, senha FROM funcionario WHERE email = '$meuemail'";
-    }
-  $result = mysqli_querry($conn, $sql);
-  $row = mysqli_fetch_array($result);
-  if ($row)
-  {$stored_hash = $row['senha'];
-    if (password_verify($minhasenha, $stored_hash))  
-      {$id = $row['id'];
-      $email = $meuemail;
-      $_SESSION['usuario'] = $email;
-      $_SESSION['id'] = $id;
-      if ($switch == 0) 
-      {header('location: cliente/index.php');
-        exit();
-      } else if ($switch == 1) 
-      {header('location: empresa/index.php');
-        exit();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   $myemail = mysqli_real_escape_string($conn, $_POST['Email']);
+   $mypassword = mysqli_real_escape_string($conn, $_POST['Senha']);
+   $switch = mysqli_real_escape_string($conn, $_POST['switch']);
+
+   if ($switch == 0) {
+      $sql = "SELECT id, senha FROM cliente WHERE Email = '$myemail'";
+   } else if ($switch == 1) {
+      $sql = "SELECT id, senha FROM funcionario WHERE Email = '$myemail'";
+   }
+
+   $result = mysqli_query($conn, $sql);
+   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+   if ($row) {
+      $stored_hash = $row['senha']; // Senha criptografada armazenada no banco de dados
+      if (password_verify($mypassword, $stored_hash)) {
+         // Autenticação bem-sucedida
+         $id = $row['id'];
+         $email = $myemail;
+
+         // Armazena os dados na sessão
+         $_SESSION['usuario'] = $email;
+         $_SESSION['id'] = $id;
+          //revisar amanhã se esta correto
+         if ($switch == 0) {
+            header('Location: index.php');
+            exit();
+         } elseif ($switch == 1) {
+            header('Location: index.php');
+            exit();
+         }
+      } else {
+         $_SESSION['mensagemerro'] = "E-mail ou Senha não coincidem.";
+         header('Location: login.php');
+         exit();
       }
-      } else
-      {$_SESSION['mensagemerro'] = "O email ou senha informados estão incorretos";
-        header('location: login.php');
-        exit();
-      }
-    } else 
-      {$_SESSION['mensagemerro'] = "Usuario não localizado";
-      header('location: login.php');
+   } else {
+      $_SESSION['mensagemerro'] = "Usuário não encontrado.";
+      header('Location: login.php');
       exit();
-    }
-  } */
+   }
+}
 ?>
 
 
@@ -64,7 +71,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
             <label for="senha" class="form-label">Senha</label>
             <input type="password" class="form-control" id="senha">
           </div>
-        <a href="cadastro.html">Cadastrar-se</a>
+        <a href="cadastro.php">Cadastrar-se</a>
         <button type="button" class="btn btn-primary">Entrar</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
