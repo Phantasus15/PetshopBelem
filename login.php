@@ -1,53 +1,6 @@
 <?php
-include("conexao.php");
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   $myemail = mysqli_real_escape_string($conn, $_POST['Email']);
-   $mypassword = mysqli_real_escape_string($conn, $_POST['Senha']);
-   $switch = mysqli_real_escape_string($conn, $_POST['switch']);
-
-   if ($switch == 0) {
-      $sql = "SELECT id, senha FROM cliente WHERE Email = '$myemail'";
-   } else if ($switch == 1) {
-      $sql = "SELECT id, senha FROM funcionario WHERE Email = '$myemail'";
-   }
-
-   $result = mysqli_query($conn, $sql);
-   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-   if ($row) {
-      $stored_hash = $row['senha']; // Senha criptografada armazenada no banco de dados
-      if (password_verify($mypassword, $stored_hash)) {
-         // Autenticação bem-sucedida
-         $id = $row['id'];
-         $email = $myemail;
-
-         // Armazena os dados na sessão
-         $_SESSION['usuario'] = $email;
-         $_SESSION['id'] = $id;
-          //revisar amanhã se esta correto
-         if ($switch == 0) {
-            header('Location: index.php');
-            exit();
-         } elseif ($switch == 1) {
-            header('Location: index.php');
-            exit();
-         }
-      } else {
-         $_SESSION['mensagemerro'] = "E-mail ou Senha não coincidem.";
-         header('Location: login.php');
-         exit();
-      }
-   } else {
-      $_SESSION['mensagemerro'] = "Usuário não encontrado.";
-      header('Location: login.php');
-      exit();
-   }
-}
+include("./logicaSistema/logicaLogin.php");
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,18 +14,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body class="flex-column">
-    <form action="post">
+    <form action="" method="post">
         <h1>Login</h1>
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email">
+            <input class="form-control" type="email" name="email" id="email" required>
           </div>
           <div class="mb-3">
             <label for="senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="senha">
+            <input class="form-control" type="password" name="senha" id="senha" required>
           </div>
         <a href="cadastro.php">Cadastrar-se</a>
-        <button type="button" class="btn btn-primary">Entrar</button>
+        <input type="submit" name="entrar" id="entrar" value="Entrar">
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

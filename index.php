@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,40 +22,48 @@ include("header.php");
                 <h6>Destaque para Cães</h6>
                 <ul class="lista">
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/racao.png" alt="">
-                        </div>
-                        <p>
-                            Ração
-                        </p>
+                                <img class="icone" src="assets/racao.png" alt="">
+                            </div>
+                            <p>
+                                Ração
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/medicamento.png" alt="">
-                        </div>
-                        <p>
-                            Medicamento
-                        </p>
+                                <img class="icone" src="assets/medicamento.png" alt="">
+                            </div>
+                            <p>
+                                Medicamento
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/banho.png" alt="">
-                        </div>
-                        <p>
-                            Higiene
-                        </p>
+                                <img class="icone" src="assets/banho.png" alt="">
+                            </div>
+                            <p>
+                                Higiene
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/acessorios.png" alt="">
-                        </div>
-                        <p>
-                            Acessorios
-                        </p>
+                                <img class="icone" src="assets/acessorios.png" alt="">
+                            </div>
+                            <p>
+                                Acessorios
+                            </p>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -64,40 +71,48 @@ include("header.php");
                 <h6>Destaque para Gatos</h6>
                 <ul class="lista">
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/racao.png" alt="">
-                        </div>
-                        <p>
-                            Ração
-                        </p>
+                                <img class="icone" src="assets/racao.png" alt="">
+                            </div>
+                            <p>
+                                Ração
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/medicamento.png" alt="">
-                        </div>
-                        <p>
-                            Medicamento
-                        </p>
+                                <img class="icone" src="assets/medicamento.png" alt="">
+                            </div>
+                            <p>
+                                Medicamento
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/banho.png" alt="">
-                        </div>
-                        <p>
-                            Higiene
-                        </p>
+                                <img class="icone" src="assets/banho.png" alt="">
+                            </div>
+                            <p>
+                                Higiene
+                            </p>
+                        </a>
                     </li>
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets/acessorios.png" alt="">
-                        </div>
-                        <p>
-                            Acessorios
-                        </p>
+                                <img class="icone" src="assets/acessorios.png" alt="">
+                            </div>
+                            <p>
+                                Acessorios
+                            </p>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -107,13 +122,15 @@ include("header.php");
                 <h6>Agende seu banho e tosa</h6>
                 <ul class="lista">
                     <li>
-                        <div class="imagem">
+                        <a href="listaProduto.php">
+                            <div class="imagem">
 
-                            <img class="icone" src="assets\banhoetosa.png" alt="">
-                        </div>
-                        <p>
-                            Banho e tosa
-                        </p>
+                                <img class="icone" src="assets\banhoetosa.png" alt="">
+                            </div>
+                            <p>
+                                Banho e tosa
+                            </p>
+                        </a>
                     </li>
                 </ul>
             </div>
