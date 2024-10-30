@@ -9,7 +9,7 @@ include("./logicaSistema/logicaLogin.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/cadastroUsuario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -24,7 +24,7 @@ include("./logicaSistema/logicaLogin.php");
             <label for="senha" class="form-label">Senha</label>
             <input class="form-control" type="password" name="senha" id="senha" required>
           </div>
-        <a href="cadastro.php">Cadastrar-se</a>
+        <a href="cadastroUsuario.php">Cadastrar-se</a>
         <input type="submit" name="entrar" id="entrar" value="Entrar">
     </form>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

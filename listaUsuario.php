@@ -43,7 +43,7 @@ include("header.php");
                             <th>Email</th>
                             <th>Nome</th>
                             <th>Tipo</th>
-                            <th>Status</th>
+                            <th>Situação</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -57,9 +57,9 @@ include("header.php");
                             <td><?= $usuario["id"] ?></td>
                             <td><?= $usuario["email"] ?></td>
                             <td><?= $usuario["nome"] ?></td>
-                            <td><?= $usuario["tipoUsuario"] ?></td>
+                            <td><?= $usuario["tipo_usuario"] ?></td>
                             <td>
-                                <span class="status-active">Ativo</span>
+                                <span class="status-active"><?= $usuario["situacao"] ?></span>
                             </td>
                             <td class="buttons">
                                 <img

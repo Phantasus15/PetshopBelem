@@ -22,7 +22,7 @@ include("header.php");
                 <h6>Destaque para Cães</h6>
                 <ul class="lista">
                     <li>
-                        <a href="listaProduto.php">
+                        <form action="listaProdutoCategoria.php" method="post">
                             <div class="imagem">
 
                                 <img class="icone" src="assets/racao.png" alt="">
@@ -30,7 +30,7 @@ include("header.php");
                             <p>
                                 Ração
                             </p>
-                        </a>
+                        </form>
                     </li>
                     <li>
                         <a href="listaProduto.php">

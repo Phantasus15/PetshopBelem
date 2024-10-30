@@ -29,7 +29,7 @@ include("header.php");
           <div class="grid-item">
               <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card">
               <div class="card-body">
-                  <h5 class="card-title"><?= $produto["nomeProduto"] ?></h5>
+                  <h5 class="card-title"><?= $produto["nome_produto"] ?></h5>
                   <br>
                   <p class="card-text"><?= $produto["valor"] ?></p>
                   <a href="visitaProduto.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Visitar</a>

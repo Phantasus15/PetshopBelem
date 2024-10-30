@@ -14,7 +14,7 @@ include("./logicaSistema/logicaLogin.php");
 </head>
 
 <body>
-  <form method="post" action="logicaSistema/logicaCadastro.php">
+  <form method="post" action="logicaSistema/logicaCadastroUsuario.php">
     <h1>Cadastro</h1>
     <div class="mb-3">
       <label for="nome_cliente" class="form-label">Nome Completo</label>
@@ -34,7 +34,7 @@ include("./logicaSistema/logicaLogin.php");
     </div>
     <div class="mb-3">
       <label for="cep" class="form-label">Tipo usuario</label>
-      <select name="tipoUsuario">
+      <select name="tipo_usuario">
         <option value="CLI">Cliente</option>
         <option value="FUN">Funcionário</option>
       </select>

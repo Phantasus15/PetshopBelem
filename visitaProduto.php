@@ -24,10 +24,10 @@ include("header.php");
         <div class="grid-container">
             <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card">
             <div class="card-body">
-                <h3 class="card-title"><?= $produto['nomeProduto'] ?></h3>
-                <label><b>Descrição:</b> <?= $produto['descrição'] ?></label>
+                <h3 class="card-title"><?= $produto['nome_produto'] ?></h3>
+                <label><b>Descrição:</b> <?= $produto['descricao'] ?></label>
                 <br>
-                <label><b>categoria: </b><?= $produto['nomeCategoria'] ?></label>
+                <label><b>categoria: </b><?= $produto['nome_categoria_produto'] ?></label>
                 <br>
                 <label><b>Valor:</b> R$<?= $produto['valor'] ?></label>
                 <br>
