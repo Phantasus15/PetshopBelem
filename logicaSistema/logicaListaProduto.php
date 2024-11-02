@@ -14,4 +14,23 @@ function listaProduto($conn)
 	return $produtos;
 }
 
+function listaProdutosPorCategoria($conn, $categoriaProduto)
+{
+	$query = "SELECT * FROM produto WHERE nome_categoria_animal = {$categoriaProduto}";
+	$resultado = mysqli_query($conn, $query);
+
+	if (!$resultado) {
+		die("Erro na consulta: " . mysqli_error($conn));
+	}
+
+	$produtos = array();
+
+	while ($produto = mysqli_fetch_assoc($resultado)) {
+		$produtos[] = $produto;
+	}
+
+	return $produtos;
+}
+
+
 ?>

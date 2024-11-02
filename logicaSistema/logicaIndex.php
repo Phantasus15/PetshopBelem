@@ -19,7 +19,7 @@ if (isset($_POST['entrar'])) {
             if ($user['tipo_usuario'] == 'ADM' || $user['tipo_usuario'] == 'FUN') {
                 header("Location: funcionarioInicio.php");
             } elseif ($user['tipo_usuario'] == 'CLI') {
-                header("Location: index.php");
+                header("Location: clienteInicio.php");
             }
             exit();
         } else {

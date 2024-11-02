@@ -1,144 +1,35 @@
+<?php
+include("./logicaSistema/logicaIndex.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-    <link rel="stylesheet" href="css/home.css">
-
-    </link>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cadastroUsuario.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<?php
-include("header.php");
-?>
 
-<body>
-    <div class="main">
-        <div class="linha">
-            <div class="card">
-                <h6>Destaque para Cães</h6>
-                <ul class="lista">
-                    <li>
-                        <form action="listaProdutoCategoria.php" method="post">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/racao.png" alt="">
-                            </div>
-                            <p>
-                                Ração
-                            </p>
-                        </form>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/medicamento.png" alt="">
-                            </div>
-                            <p>
-                                Medicamento
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/banho.png" alt="">
-                            </div>
-                            <p>
-                                Higiene
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/acessorios.png" alt="">
-                            </div>
-                            <p>
-                                Acessorios
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card">
-                <h6>Destaque para Gatos</h6>
-                <ul class="lista">
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/racao.png" alt="">
-                            </div>
-                            <p>
-                                Ração
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/medicamento.png" alt="">
-                            </div>
-                            <p>
-                                Medicamento
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/banho.png" alt="">
-                            </div>
-                            <p>
-                                Higiene
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets/acessorios.png" alt="">
-                            </div>
-                            <p>
-                                Acessorios
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="linha">
-            <div class="card">
-                <h6>Agende seu banho e tosa</h6>
-                <ul class="lista">
-                    <li>
-                        <a href="listaProduto.php">
-                            <div class="imagem">
-
-                                <img class="icone" src="assets\banhoetosa.png" alt="">
-                            </div>
-                            <p>
-                                Banho e tosa
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<body class="flex-column">
+    <form action="" method="post">
+        <h1>Login</h1>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" type="email" name="email" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input class="form-control" type="password" name="senha" id="senha" required>
+          </div>
+        <a href="cadastroUsuario.php">Cadastrar-se</a>
+        <input type="submit" name="entrar" id="entrar" value="Entrar">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-<?php
-include("footer.php");
-?>
 
 </html>

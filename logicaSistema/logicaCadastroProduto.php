@@ -1,5 +1,5 @@
 <?php
-include("../conexao.php");
+include("./conexao.php");
 
 if (isset($_POST['cadastroProduto'])) {
     $nomeProduto = $_POST["nome_produto"];

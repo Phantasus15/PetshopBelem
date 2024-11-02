@@ -22,26 +22,31 @@ include("header.php");
   <h6>Destaque para Cães</h6>
     <div class="grid-container">
         <?php
-        $produtos = listaProduto($conn);
+        if(isset($_POST['nome_categoria_produto'])) {
+          $categoriaProduto = $_POST['nome_categoria_produto'];
+          $produtos = listaProdutosPorCategoria($conn, $categoriaProduto);
 
-        foreach ($produtos as $produto) {
-        ?>
-          <div class="grid-item">
-              <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card">
-              <div class="card-body">
-                  <h5 class="card-title"><?= $produto["nome_produto"] ?></h5>
-                  <br>
-                  <p class="card-text"><?= $produto["valor"] ?></p>
-                  <a href="visitaProduto.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Visitar</a>
-                  <a href="telaCarrinho.php" class="btn btn-primary">Adicionar</a>
-              </div>
-          </div>
-        <?php
-        }
-        ?>
-         
-          <a href="#">Ver mais >></a>
+          foreach ($produtos as $produto) {
+          ?>
+            <div class="grid-item">
+                <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $produto["nome_produto"] ?></h5>
+                    <br>
+                    <p class="card-text"><?= $produto["valor"] ?></p>
+                    <a href="visitaProduto.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Visitar</a>
+                    <a href="telaCarrinho.php" class="btn btn-primary">Adicionar</a>
+                </div>
+            </div>
+          <?php
+          }
+          ?>
+          
+            <a href="#">Ver mais >></a>
       </div>
+      <?php
+        }
+      ?>
     </div>  
 </body>
 <?php

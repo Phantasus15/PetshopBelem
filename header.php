@@ -12,7 +12,9 @@ include("logicaSistema/logicaAcessoUsuario.php");
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+            
+                <a class="nav-link" href="<?php if (funcionarioEstaLogado()) {?>funcionarioInicio.php<?php } else {?>clienteInicio.php<?php }?>">Inicio<span class="sr-only">(current)</span></a>
+
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Pedidos<span class="sr-only">(current)</span></a>
@@ -29,15 +31,18 @@ include("logicaSistema/logicaAcessoUsuario.php");
             <li class="nav-item active">
                 <a class="nav-link" href="#">Relatório<span class="sr-only">(current)</span></a>
             </li>
-            <?php if (!funcionarioEstaLogado()): ?>
+            <?php if (funcionarioEstaLogado()): ?>
                 <li class="nav-item active">
+                    <a class="nav-link" href="cadastroProduto.php">Cadastrar<span class="sr-only">(current)</span></a>
+                </li>
+                <li>    
                     <a class="nav-link" href="listaUsuario.php">Usuarios<span class="sr-only">(current)</span></a>
                 </li>
             <?php endif; ?>
             <?php if (isset($_SESSION['email'])): ?>
                 <li style="float:right"><a href="./logicaSistema/logicaLogout.php">Logout</a></li>
             <?php else: ?>
-                <li style="float:right"><a class="active" href="login.php">Entrar</a></li>
+                <li style="float:right"><a class="active" href="index.php">Entrar</a></li>
             <?php endif; ?>
         </ul>
     </div>
