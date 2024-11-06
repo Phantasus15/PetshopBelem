@@ -12,8 +12,10 @@ include("logicaSistema/logicaAcessoUsuario.php");
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-            
-                <a class="nav-link" href="<?php if (funcionarioEstaLogado()) {?>funcionarioInicio.php<?php } else {?>clienteInicio.php<?php }?>">Inicio<span class="sr-only">(current)</span></a>
+
+                <a class="nav-link"
+                    href="<?php if (funcionarioEstaLogado()) { ?>funcionarioInicio.php<?php } else { ?>clienteInicio.php<?php } ?>">Inicio<span
+                        class="sr-only">(current)</span></a>
 
             </li>
             <li class="nav-item active">
@@ -23,33 +25,32 @@ include("logicaSistema/logicaAcessoUsuario.php");
                 <a class="nav-link" href="#">Agendamentos<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Estoque<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
                 <a class="nav-link" href="#">Histórico<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Relatório<span class="sr-only">(current)</span></a>
             </li>
-            <?php if (funcionarioEstaLogado()): ?>
+            <?php if (funcionarioEstaLogado()) { ?>
+                <li class="nav-item active">
+                    <a class="nav-link" href="listaEstoque.php">Estoque<span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="cadastroProduto.php">Cadastrar<span class="sr-only">(current)</span></a>
                 </li>
-                <li>    
+                <li>
                     <a class="nav-link" href="listaUsuario.php">Usuarios<span class="sr-only">(current)</span></a>
                 </li>
-            <?php endif; ?>
-            <?php if (isset($_SESSION['email'])): ?>
-                <li style="float:right"><a href="./logicaSistema/logicaLogout.php">Logout</a></li>
-            <?php else: ?>
-                <li style="float:right"><a class="active" href="index.php">Entrar</a></li>
-            <?php endif; ?>
+            <?php } ?>
         </ul>
     </div>
     <div class="perfil">
         <ul class="navbar-nav mr-auto centro">
-            <li class="nav-item active">Perfil</li>
             <li class="nav-item active"><i class="bi bi-person-circle"></i></li>
+            <li class="nav-item active">Seja bem vindo(a)! <br> <u><a
+                        href="perfilUsuario.php"><?= usuarioLogado() ?></a></u> </li>
+            <?php if (isset($_SESSION['email'])) { ?>
+                <li style="float:right"><a href="./logicaSistema/logicaLogout.php">Logout</a></li>
+            <?php } ?>
         </ul>
     </div>
 </nav>

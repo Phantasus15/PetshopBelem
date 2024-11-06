@@ -14,9 +14,9 @@ function listaProduto($conn)
 	return $produtos;
 }
 
-function listaProdutosPorCategoria($conn, $categoriaProduto)
+function listaProdutosPorCategoria($conn, $categoriaAnimal, $categoriaProduto)
 {
-	$query = "SELECT * FROM produto WHERE nome_categoria_animal = {$categoriaProduto}";
+	$query = "SELECT * FROM produto WHERE nome_categoria_produto = {$categoriaProduto} AND nome_categoria_animal = {$categoriaAnimal}";
 	$resultado = mysqli_query($conn, $query);
 
 	if (!$resultado) {

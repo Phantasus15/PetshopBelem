@@ -1,12 +1,15 @@
 <?php
+include("logicaSistema/logicaCadastroProduto.php");
 include("logicaSistema/logicaListaProduto.php");
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inicio</title>
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/listaProduto.css">
 
     </link>
@@ -17,38 +20,33 @@ include("logicaSistema/logicaListaProduto.php");
 <?php
 include("header.php");
 ?>
+
 <body>
-  <div class="main">
-  <h6>Destaque para Cães</h6>
+    <div class="main">
     <div class="grid-container">
         <?php
-        if(isset($_POST['nome_categoria_animal']) && isset($_POST['nome_categoria_produto'])) {
-          $categoriaAnimal = $_POST['nome_categoria_animal'];
-          $categoriaProduto = $_POST['nome_categoria_produto'];
-          $produtos = listaProdutosPorCategoria($conn, $categoriaAnimal, $categoriaProduto);
+        $produtos = listaProduto($conn);
 
-          foreach ($produtos as $produto) {
-          ?>
+        foreach ($produtos as $produto) {
+            ?>
             <div class="grid-item">
                 <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card wi" height="200px">
                 <div class="card-body">
                     <h5 class="card-title"><?= $produto["nome_produto"] ?></h5>
                     <br>
-                    <p class="card-text"><?= $produto["valor"] ?></p>
-                    <a href="visitaProduto.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Visitar</a>
-                    <a href="telaCarrinho.php" class="btn btn-primary">Adicionar</a>
+                    <p class="card-text">R$<?= $produto["valor"] ?></p>
+                    <a href="visitaProduto.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Editar</a>
+                    <a href="telaCarrinho.php" class="btn btn-primary">Arquivar</a>
                 </div>
             </div>
-          <?php
-          }
-          ?>
-      </div>
-      <?php
+            <?php
         }
-      ?>
-    </div>  
+        ?>
+    </div>
+    </div>
 </body>
 <?php
 include("footer.php");
 ?>
+
 </html>

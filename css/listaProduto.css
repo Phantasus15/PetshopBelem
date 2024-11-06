@@ -1,7 +1,7 @@
 .main{
     background-image: url("./../assets/fundo.jfif");
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -15,12 +15,12 @@
     grid-template-columns: auto auto auto auto;
     justify-content: center;
     padding: 40px;
-    grid-column-gap: 10px;
+    grid-column-gap: 120px;
     grid-row-gap: 25px;
 }
 
 .grid-item {
-    display: flex;
+
     background-color: #F9E3BECC;
     border-radius: 15px;
     padding: 25px;

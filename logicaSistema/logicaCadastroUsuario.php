@@ -19,7 +19,7 @@ if (isset($_POST['cadastroUsuario'])) {
 
     if (mysqli_query($conn, $sql)) {
         $_SESSION['mensagem'] = 'Cadastro realizado com sucesso!';
-        header('Location: ../login.php');
+        header('Location: ../index.php');
     } else {
         echo '<div class="alert alert-danger" role="alert">
                     Erro: ' . $sql . '<br>' . $conn->error . '

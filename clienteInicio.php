@@ -30,6 +30,7 @@ include("header.php");
                 ?>
                     <li>
                         <form action="listaProduto.php" method="post">
+                            <input type="hidden" name="nome_categoria_animal" value="1">
                             <input type="hidden" name="nome_categoria_produto" value="<?= $categoriaProduto["id"] ?>">
                             <div class="imagem">
                                 <img class="icone" src="assets/racao.png" alt="">
@@ -52,8 +53,9 @@ include("header.php");
                 foreach ($categorias as $categoriaProduto) {
                 ?>
                     <li>
-                        <form action="listaProduto.php" method="post">
-                            <input type="hidden" name="nome_categoria_produto" value="<?= $categoriaProduto["id"] ?>">
+                        <form action="listaProduto.php" method="post">      
+                        <input type="hidden" name="nome_categoria_animal" value="2">
+                        <input type="hidden" name="nome_categoria_produto" value="<?= $categoriaProduto["id"] ?>">
                             <div class="imagem">
                                 <img class="icone" src="assets/racao.png" alt="">
                             </div>

@@ -22,7 +22,7 @@ include("header.php");
 <body>
     <div class="main">
         <div class="grid-container">
-            <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card">
+            <img class="card-img-top" src="<?= $produto['imagem'] ?>" alt="Imagem de capa do card" height="500px">
             <div class="card-body">
                 <h3 class="card-title"><?= $produto['nome_produto'] ?></h3>
                 <label><b>Descrição:</b> <?= $produto['descricao'] ?></label>
@@ -33,6 +33,7 @@ include("header.php");
                 <br>
                 <a href="telaProduto.php" class="btn btn-primary">Comprar</a>
                 <a href="telaCarrinho.php" class="btn btn-primary">Carrinho</a>
+                <a href="javascript:history.back()" class="btn btn-secondary">Voltar</a>
             </div>
         </div>
     </div>

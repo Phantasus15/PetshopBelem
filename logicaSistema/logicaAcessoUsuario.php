@@ -7,4 +7,11 @@ function funcionarioEstaLogado() {
     }
     return false;
 }
+
+function usuarioLogado() {
+    if (isset($_SESSION['nome'])) {
+        return $_SESSION['nome'];
+    }
+    return false;
+}
 ?>

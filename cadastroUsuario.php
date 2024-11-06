@@ -1,5 +1,5 @@
 <?php
-include("./logicaSistema/logicaLogin.php");
+include("./logicaSistema/logicaIndex.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +51,9 @@ include("./logicaSistema/logicaLogin.php");
       <label for="senha" class="form-label">Confirmar senha</label>
       <input type="password" class="form-control" name="confirmar_senha" required>
     </div>
+    <label for="email" class="form-label">Já possui conta?
+    <a href="index.php">Fazer login.</a>
+    </label>
       <input class="btn btn-primary" type="submit" name="cadastroUsuario" id="submit" value="Cadastrar">
   </form>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

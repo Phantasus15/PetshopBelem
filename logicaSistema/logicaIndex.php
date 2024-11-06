@@ -15,6 +15,7 @@ if (isset($_POST['entrar'])) {
         if ($user['situacao'] == 1 && password_verify($senha, $user['senha'])) {
             $_SESSION['email'] = $email;
             $_SESSION['tipo_usuario'] = $user['tipo_usuario'];
+            $_SESSION['nome'] = $user['nome'];
 
             if ($user['tipo_usuario'] == 'ADM' || $user['tipo_usuario'] == 'FUN') {
                 header("Location: funcionarioInicio.php");
