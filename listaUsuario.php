@@ -23,8 +23,6 @@ include("header.php");
 <body>
     <div class="main">
         <div class="container">
-
-
             <div class="module-content">
                 <div class="header">
                     <img
@@ -32,10 +30,6 @@ include("header.php");
                     <h2>Usuários</h2>
                     <p>Gerencie os usuários do sistema</p>
                 </div>
-
-
-                
-
                 <table class="table table-responsive table-hover table-striped table-responsive">
                     <thead>
                         <tr>
@@ -62,11 +56,9 @@ include("header.php");
                                 <span class="status-active"><?= $usuario["situacao"] ?></span>
                             </td>
                             <td class="buttons">
-                                <img
-                                src="assets/icon_edita.png" height="30px" width="30px">
-                                <a href="#" class="btn btn-default" title="Editar">
-                                    <span class="glyphicon glyphicon-edit"></span>
-                                </a>
+                            <a href="editaUsuario.php?id=<?= $usuario["id"] ?>" class="btn btn-default" title="Editar">
+                                <img src="assets/icon_edita.png" height="30px" width="30px">
+                            </a>
                             </td>
                             <td class="buttons">
                                 <img

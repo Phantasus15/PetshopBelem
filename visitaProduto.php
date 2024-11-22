@@ -32,7 +32,7 @@ include("header.php");
                 <label><b>Valor:</b> R$<?= $produto['valor'] ?></label>
                 <br>
                 <a href="telaProduto.php" class="btn btn-primary">Comprar</a>
-                <a href="telaCarrinho.php" class="btn btn-primary">Carrinho</a>
+                <a href="telaCarrinho.php?">Carrinho</a>
                 <a href="javascript:history.back()" class="btn btn-secondary">Voltar</a>
             </div>
         </div>
