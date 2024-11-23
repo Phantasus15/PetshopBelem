@@ -25,29 +25,33 @@ include("logicaSistema/logicaAcessoUsuario.php");
                 <a class="nav-link" href="#">Agendamentos<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?php if (!funcionarioEstaLogado()) { ?>carrinho.php<?php } ?>">Carrinho<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?php if (!funcionarioEstaLogado()) { ?>carrinho.php<?php } ?>">Carrinho<span
+                        class="sr-only">(current)</span></a>
             </li>
             <?php if (funcionarioEstaLogado()) { ?>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Relatório<span class="sr-only">(current)</span></a>
-            </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Relatório<span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="listaEstoque.php">Estoque<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="cadastroProduto.php">Cadastrar<span class="sr-only">(current)</span></a>
                 </li>
-                <li>
-                    <a class="nav-link" href="listaUsuario.php">Usuarios<span class="sr-only">(current)</span></a>
-                </li>
+                <?php if (isset($_SESSION["tipo_usuario"]) && $_SESSION["tipo_usuario"] == 'ADM') { ?>
+                    <li>
+                        <a class="nav-link" href="listaUsuario.php">Usuarios<span class="sr-only">(current)</span></a>
+                    </li>
+                <?php } ?>
             <?php } ?>
         </ul>
     </div>
     <div class="perfil">
         <ul class="navbar-nav mr-auto centro">
             <li class="nav-item active"><i class="bi bi-person-circle"></i></li>
-            <li class="nav-item active">Seja bem vindo(a)! <br> <u><a
-                        href="perfilUsuario.php"><?= usuarioLogado() ?></a></u> </li>
+            <li class="nav-item active">Seja bem vindo(a)! <br>
+                <u><a href="perfilUsuario.php"><?= htmlspecialchars(usuarioLogado()) ?></a></u>
+            </li>
             <?php if (isset($_SESSION['email'])) { ?>
                 <li style="float:right"><a href="./logicaSistema/logicaLogout.php">Logout</a></li>
             <?php } ?>
