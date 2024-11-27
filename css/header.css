@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #F9E3BE;
+    width: 100vw;
+}
+a:link a:visited{
+    color: black!important;
+    text-decoration: none;
+}
+.nav-link{
+    color: black!important;
+    text-decoration: none;
+}
+i{
+    font-size: 50px;
+}
+.centro{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
