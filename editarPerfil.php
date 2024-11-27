@@ -11,8 +11,6 @@
 </head>
 <?php
 include("header.php");
-?>
-<?php
 include("conexao.php");
 
 // Verifica se o usuário está logado
